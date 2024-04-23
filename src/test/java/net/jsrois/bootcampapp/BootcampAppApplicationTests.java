@@ -11,7 +11,7 @@ class BootcampAppApplicationTests {
 
     @Test
     void contextLoads() {
-        assertThat(2+2, equalTo(5));
+
     }
 
 }
