@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <p>En construcción</p>
+      <p>Desplegando automaticamente</p>
     </>
   )
 }
