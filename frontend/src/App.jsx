@@ -1,10 +1,23 @@
 import './App.css'
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 function App() {
 
+    const [students, setStudents] = useState([]);
+
+
+    useEffect(() => {
+        axios.get("http://localhost:8081/api/students")
+            .then( body => setStudents(body.data));
+    }, []);
+
+
   return (
     <>
-      <p>Desplegando automáticamente</p>
+        {
+            students.map( s => <p>{s.name}</p>)
+        }
     </>
   )
 }
