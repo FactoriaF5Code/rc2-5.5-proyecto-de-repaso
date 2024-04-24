@@ -6,7 +6,7 @@ describe("La aplicación", () => {
     render(<App/>);
 
     it(" muestra un mensaje ", () => {
-        expect(screen.getByText(/En construcción/)).toBeInTheDocument()
+        expect(screen.getByText(/Desplegando automáticamente/)).toBeInTheDocument()
     })
 })
 

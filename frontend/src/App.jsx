@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <p>Desplegando automaticamente</p>
+      <p>Desplegando automáticamente</p>
     </>
   )
 }
