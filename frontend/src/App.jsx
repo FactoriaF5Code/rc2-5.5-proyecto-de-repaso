@@ -8,7 +8,7 @@ function App() {
 
 
     useEffect(() => {
-        axios.get("http://localhost:8081/api/students")
+        axios.get("/api/students")
             .then( body => setStudents(body.data));
     }, []);
 
