@@ -17,6 +17,6 @@ EXPOSE 8080
 # Copy the JAR file from the build stage
 COPY --from=build /home/app/target/*.jar app.jar
 
-ENV SPRING_PROFILES_ACTIVE=dev
+ENV SPRING_PROFILES_ACTIVE=fly
 
 ENTRYPOINT ["java","-jar","/app.jar"]
