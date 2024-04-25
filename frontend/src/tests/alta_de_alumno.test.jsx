@@ -24,13 +24,14 @@ describe("La aplicación", () => {
     it(" nos permite dar de alta a un alumno ", async () => {
         render(<App/>);
 
-        await userEvent.click(screen.getByText(/Alta de Alumnos/));
+        await userEvent.click(screen.getByText(/Alta de alumnos/));
 
         // entramos en la página de nuevo estudiante
-        let nameInput = await screen.findByLabelText("/Nombre/");
+        let nameInput = screen.getByLabelText(/Nombre/);
+        expect(nameInput).toBeInTheDocument();
         await userEvent.type(nameInput, "Pepito");
 
-        let courseSelect = await screen.findByLabelText("/Curso/");
+        let courseSelect = await screen.findByLabelText(/Curso/);
         await userEvent.selectOptions(courseSelect, "RuralCamp2");
 
         await userEvent.click(screen.getByText("Alta"));
