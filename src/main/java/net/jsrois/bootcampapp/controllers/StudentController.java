@@ -16,6 +16,11 @@ public class StudentController {
         this.studentRepository = studentRepository;
     }
 
+    @PostMapping("/auth/login")
+    public String login() {
+        return "Muy bien campeón";
+    }
+
     @PostMapping("/api/students")
     public CreatedStudentResponse createStudent(@RequestBody CreateStudentRequest request) {
         Student student = new Student(
