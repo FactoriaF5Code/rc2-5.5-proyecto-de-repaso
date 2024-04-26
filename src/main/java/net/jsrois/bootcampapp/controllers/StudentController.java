@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
 public class StudentController {
 
     private final StudentRepository studentRepository;
